@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/widgets/resource_list.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -99,10 +100,7 @@ class _ExpensesState extends State<Expenses>{
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Center(
-                  child: Text(
-                    '[ Tracking ${_registeredExpenses.length} Active Resources ]',
-                    style: TextStyle(color: Colors.white54),
-                  ),
+                  child: ResourceList(resources: _registeredExpenses),
                 ),
               ),
             ),
